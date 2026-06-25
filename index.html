@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Graphics Animations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- CHOICE SCREEN -->
+    <div id="menu-screen" class="screen active">
+        <h1>Computer Graphics Animations</h1>
+        <div class="cards-grid">
+            <div class="card" onclick="showAnimation('ball')">
+                <div class="card-icon">🔴</div>
+                <h2>Bouncing Ball</h2>
+                <p>Red ball bouncing with physics</p>
+            </div>
+            <div class="card" onclick="showAnimation('car')">
+                <div class="card-icon">🚗</div>
+                <h2>Moving Car</h2>
+                <p>Car driving across the road</p>
+            </div>
+            <div class="card" onclick="showAnimation('triangle')">
+                <div class="card-icon">🔺</div>
+                <h2>Rotating Triangle</h2>
+                <p>RGB triangle spinning</p>
+            </div>
+            <div class="card" onclick="showAnimation('cube')">
+                <div class="card-icon">🎲</div>
+                <h2>Rotating Cube</h2>
+                <p>3D cube with colored faces</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ANIMATION SCREENS (hidden by default) -->
+    <div id="ball-screen" class="screen">
+        <div class="nav-bar">
+            <button class="back-btn" onclick="backToMenu()">← Back to Menu</button>
+            <h2>Bouncing Ball</h2>
+        </div>
+        <canvas id="ball-canvas"></canvas>
+    </div>
+
+    <div id="car-screen" class="screen">
+        <div class="nav-bar">
+            <button class="back-btn" onclick="backToMenu()">← Back to Menu</button>
+            <h2>Moving Car</h2>
+        </div>
+        <canvas id="car-canvas"></canvas>
+    </div>
+
+    <div id="triangle-screen" class="screen">
+        <div class="nav-bar">
+            <button class="back-btn" onclick="backToMenu()">← Back to Menu</button>
+            <h2>Rotating Triangle</h2>
+        </div>
+        <canvas id="triangle-canvas"></canvas>
+    </div>
+
+    <div id="cube-screen" class="screen">
+        <div class="nav-bar">
+            <button class="back-btn" onclick="backToMenu()">← Back to Menu</button>
+            <h2>Rotating Cube</h2>
+        </div>
+        <canvas id="cube-canvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
